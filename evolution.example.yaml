@@ -1,0 +1,75 @@
+# config/evolution.example.yaml
+# Copy to config/evolution.yaml and modify as needed
+
+# Mutation parameters
+mutation_rate_min: 5.0
+mutation_rate_max: 30.0
+mutation_rate_initial: 15.0
+mutation_rate_dynamic: true
+mutation_increase_on_failure: 10.0
+
+# Fitness thresholds
+fitness_threshold_keep: 30.0
+fitness_threshold_promote: 70.0
+fitness_threshold_cull: 15.0
+fitness_weights:
+  success_rate: 0.4
+  stealth: 0.2
+  speed: 0.15
+  adaptability: 0.15
+  resource_usage: 0.1
+
+# Population control
+population_min: 5
+population_max: 20
+elitism_count: 3
+selection_pressure: 3.0
+
+# Time-based parameters
+generation_max_age_hours: 168
+starvation_days: 30
+max_consecutive_failures: 5
+min_time_between_mutations_hours: 2
+
+# Exploit creation
+exploit_creation_threshold: 60.0
+exploit_creation_rate_max_per_day: 3
+exploit_fuzzing_enabled: true
+exploit_fuzzing_iterations: 100
+
+# Evolution strategy
+adaptive_mutation: true
+crossover_enabled: true
+crossover_rate: 40.0
+immigrant_rate: 10.0
+
+# Memory optimization
+memory_optimization_interval_minutes: 10
+encryption_rotation_minutes: 60
+deduplication_enabled: true
+compression_enabled: true
+auto_prune_ttl_hours: 24
+
+# Replication
+replication_timeout_seconds: 30
+replication_retry_count: 3
+broadcast_all_optimizations: true
+
+# Safety
+max_risk_score_allowed: 70.0
+sandbox_only: true
+require_auth_for_targets: true
+
+# Novelty search
+novelty_enabled: true
+novelty_weight: 0.3
+novelty_archive_size: 100
+novelty_k_nearest: 15
+
+# MAP-Elites
+map_elites_enabled: true
+map_elites_resolution: [20, 20]
+
+# Coevolution
+coevolution_enabled: true
+coevolution_round_interval_seconds: 300
