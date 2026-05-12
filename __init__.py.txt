@@ -1,0 +1,16 @@
+# src/agents/__init__.py
+
+"""Agent modules for TRIAD ecosystem.  You shall add this file to agents folder."""
+
+from src.agents.base_agent import EvolvableAgent
+from src.agents.black_agent import BlackAgent, BlackGenome
+from src.agents.red_agent import RedAgent
+from src.agents.blue_agent import BlueAgent
+
+__all__ = [
+    "EvolvableAgent",
+    "BlackAgent",
+    "BlackGenome",
+    "RedAgent",
+    "BlueAgent",
+]
