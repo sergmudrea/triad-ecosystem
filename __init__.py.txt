@@ -1,0 +1,15 @@
+# src/utils/__init__.py
+
+"""Utility modules for TRIAD ecosystem."""
+
+from src.utils.crypto import generate_key, encrypt, decrypt
+from src.utils.hashing import calculate_checksum
+from src.utils.logger import setup_logger
+
+__all__ = [
+    "generate_key",
+    "encrypt",
+    "decrypt",
+    "calculate_checksum",
+    "setup_logger",
+]
