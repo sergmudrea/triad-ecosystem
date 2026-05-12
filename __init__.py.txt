@@ -1,0 +1,12 @@
+# src/simulation/__init__.py
+
+"""Simulation modules for TRIAD ecosystem."""
+
+from src.simulation.sandbox import Sandbox, Target, ExploitResult, SimulationResult
+
+__all__ = [
+    "Sandbox",
+    "Target",
+    "ExploitResult",
+    "SimulationResult",
+]
