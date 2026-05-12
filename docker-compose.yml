@@ -1,0 +1,49 @@
+# docker/docker-compose.yml
+
+version: '3.8'
+
+services:
+  triad-redis:
+    image: redis:7-alpine
+    container_name: triad-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    command: redis-server --appendonly yes
+    networks:
+      - triad-network
+
+  triad-ecosystem:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: triad-ecosystem
+    depends_on:
+      - triad-redis
+    environment:
+      - REDIS_URL=redis://triad-redis:6379
+      - TRIAD_ISOLATED=true
+      - TRIAD_DASHBOARD_PORT=8765
+    ports:
+      - "8765:8765"
+    volumes:
+      - triad-data:/data
+      - ../config:/app/config
+    networks:
+      - triad-network
+    restart: unless-stopped
+    command: >
+      python run.py
+      --preset default
+      --dashboard-port 8765
+      --redis-url redis://triad-redis:6379
+
+volumes:
+  redis-data:
+  triad-data:
+
+networks:
+  triad-network:
+    driver: bridge
+    internal: true
