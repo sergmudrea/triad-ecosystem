@@ -1,0 +1,35 @@
+# src/evolution/__init__.py
+
+"""Evolution modules for TRIAD ecosystem."""
+
+from src.evolution.parameters import (
+    EvolutionParameters,
+    AGGRESSIVE_PARAMETERS,
+    CONSERVATIVE_PARAMETERS,
+    RESEARCH_PARAMETERS,
+)
+from src.evolution.fitness import FitnessCalculator, FitnessMetrics
+from src.evolution.decision_engine import DecisionEngine
+from src.evolution.novelty import NoveltyArchive, NoveltyEnhancedFitness
+from src.evolution.map_elites import MAPElites
+from src.evolution.coevolution import CoevolutionOrchestrator
+from src.evolution.analytics import EvolutionAnalytics, EvolutionSnapshot
+from src.evolution.reporting import ReportGenerator, EvolutionReport
+
+__all__ = [
+    "EvolutionParameters",
+    "AGGRESSIVE_PARAMETERS",
+    "CONSERVATIVE_PARAMETERS",
+    "RESEARCH_PARAMETERS",
+    "FitnessCalculator",
+    "FitnessMetrics",
+    "DecisionEngine",
+    "NoveltyArchive",
+    "NoveltyEnhancedFitness",
+    "MAPElites",
+    "CoevolutionOrchestrator",
+    "EvolutionAnalytics",
+    "EvolutionSnapshot",
+    "ReportGenerator",
+    "EvolutionReport",
+]
