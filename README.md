@@ -108,4 +108,4 @@ This system runs in COMPLETELY ISOLATED environments. Not a hacking tool.
 MIT — See LICENSE
 ✍️ Author
 
-sergmudrea — by will of Master
+sergmudrea
