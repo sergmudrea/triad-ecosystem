@@ -1,0 +1,23 @@
+# Core dependencies
+async-timeout==4.0.3
+lz4==4.3.3
+msgpack==1.0.7
+redis==5.0.1
+cryptography==42.0.5
+pyyaml==6.0.1
+
+# Evolution & numerics
+numpy==1.24.3
+scipy==1.10.1
+
+# Web dashboard
+aiohttp==3.9.3
+plotly==5.19.0
+websockets==12.0
+
+# Monitoring
+psutil==5.9.5
+
+# Utilities
+python-dotenv==1.0.0
+click==8.1.7
